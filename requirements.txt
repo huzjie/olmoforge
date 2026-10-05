@@ -1,0 +1,3 @@
+# olmoforge is zero-dependency; nothing required.
+# Optional: PyYAML for richer config parsing (falls back to built-in parser).
+# pyyaml>=6.0

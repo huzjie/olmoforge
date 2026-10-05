@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: olmoforge
+  labels:
+    app: olmoforge
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: olmoforge
+  template:
+    metadata:
+      labels:
+        app: olmoforge
+    spec:
+      containers:
+        - name: olmoforge
+          image: olmoforge:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8899
+          env:
+            - name: PYTHONUNBUFFERED
+              value: "1"
+          command: ["python", "-m", "olmoforge", "serve", "--experts", "384", "--top-k", "6"]

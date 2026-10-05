@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "olmoforge"
+version = "1.0.0"
+description = "Trillion-parameter Mixture-of-Experts training framework (AI2 OLMo-core 3 direction)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+authors = [{ name = "olmoforge contributors" }]
+keywords = [
+    "mixture-of-experts", "moe", "training", "expert-parallelism",
+    "pipeline-parallelism", "mxfp8", "llm", "distributed-training",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+Homepage = "https://github.com/huzjie/olmoforge"
+
+[tool.setuptools.packages.find]
+include = ["olmoforge*"]

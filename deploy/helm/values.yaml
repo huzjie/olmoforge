@@ -1,0 +1,16 @@
+replicaCount: 1
+
+image:
+  repository: olmoforge
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8899
+
+args:
+  - "--experts"
+  - "384"
+  - "--top-k"
+  - "6"

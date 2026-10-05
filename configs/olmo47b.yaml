@@ -1,0 +1,20 @@
+# Mirrors the OLMo-core 3 47B / 128-expert benchmark configuration
+moe:
+  n_experts: 128
+  top_k: 6
+  capacity_factor: 1.25
+
+model:
+  dim: 8192
+  hidden: 3072
+  n_layers: 32
+
+parallel:
+  expert: true
+  pipeline_stages: 8
+  micro_batches: 32
+  dist_optimizer: true
+
+precision:
+  mxfp8: true
+  block_size: 32
